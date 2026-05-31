@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      docker_target: runner
+    ports:
+      - "3004:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
